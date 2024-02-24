@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Change Challenge</title>
+</head>
+<body>
+    <div class="challenge">
+        <h1>CHALLENGE ::  Can you upload your image without an upload button?</h1>
+        <p>There is vulnerbility in this website. By exploiting that vulnerbility you can upload a img to this website. I know you have it in you. Never underestimate yourself.</p>
+    </div>
+    <div class="hacked-title">
+        <h2>
+            Completed by these Genious Minds
+        </h2>
+        
+    </div>
+    <div id="imageGallery"></div>
+
+    <script>
+        // Fetch the image list from the server
+        fetch('/images')
+            .then(response => response.json())
+            .then(data => {
+                const gallery = document.getElementById('imageGallery');
+                // Loop through each document object in the data array
+                data.forEach(doc => {
+                    const img = document.createElement('img');
+                    img.src = doc.src; // Use the src property of each document object
+                    gallery.appendChild(img);
+                });
+            })
+            .catch(error => console.error('Error loading images:', error));
+    </script>
+</body>
+</html>

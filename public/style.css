@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+html {
+    background-color: rgb(211, 211, 211);
+}
+
+.challenge {
+    padding: 40px;
+    /* margin: 15px; */
+    background-color: #13121D;
+    color: rgb(219, 219, 219);
+    border-radius: 10px;
+    font-size: 14px;
+    max-width: 1236px;
+    width: 100%;
+    margin: 15px auto;
+}
+
+.challenge h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hacked-title {
+    padding: 20px 0px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+#imageGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1236px;
+    margin: auto;
+
+  }
+  
+  #imageGallery img {
+    max-width: 19%; /* This ensures maximum 4 images per row (100/4) */
+    height: auto; /* This maintains the original aspect ratio */
+    margin: 2px; /* Optional: Adds a small space between images */
+  }
+  
